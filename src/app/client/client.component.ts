@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
+import { Router } from '@angular/router'; 
 
 @Component({
   selector: 'app-client',
@@ -9,7 +10,7 @@ export class ClientComponent implements OnInit {
   
    items:any[]=[];
 
-  constructor(private dataService: DataService) {}
+  constructor(private dataService: DataService,private router: Router ) {}
 
   ngOnInit(): void {
     this.fetchItems();
@@ -26,6 +27,9 @@ export class ClientComponent implements OnInit {
       this.fetchItems();
       console.log(`Deleted item with id ${itemId}`);
     });
+  }
+  AddFormComponent(): void {
+    this.router.navigate(['/AddForm']);
   }
 
 }
