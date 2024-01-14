@@ -31,5 +31,8 @@ export class ClientComponent implements OnInit {
   AddFormComponent(): void {
     this.router.navigate(['/AddForm']);
   }
-
+  EditForm(id: number): void {
+    // Assuming '/edit-form' is the route for the EditFormComponent
+    this.router.navigate(['/editForm', id]);
+  }
 }

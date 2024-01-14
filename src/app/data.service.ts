@@ -15,11 +15,11 @@ export class DataService {
   }
 
   getItemById(id: number): Observable<any> {
-    return this.http.get<any>(`${this.apiUrl}/items/${id}`);
+    return this.http.get<any>(`${this.apiUrl}/getClient/${id}`);
   }
 
   editItem(id: number, data: any): Observable<any> {
-    return this.http.put<any>(`${this.apiUrl}/items/${id}`, data);
+    return this.http.put<any>(`${this.apiUrl}/editClient/${id}`, data);
   }
 
   deleteItem(id: number): Observable<any> {

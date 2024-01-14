@@ -12,13 +12,15 @@ import { HttpClientModule } from '@angular/common/http';
 import {DataService} from './data.service';
 import { AddformComponent } from './addform/addform.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { EditFormComponent } from './edit-form/edit-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ClientComponent,
     SideBarComponent,
-    AddformComponent
+    AddformComponent,
+    EditFormComponent
   ],
   imports: [
     BrowserModule,

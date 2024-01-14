@@ -16,7 +16,7 @@
         <td>{{ item.num }}</td>
         <td>{{ item.email }}</td>
         <td>
-          <button  class="btn btn-primary">Edit</button>
+          <button  (click)="EditForm(item.id)" class="btn btn-primary">Edit</button>
           <button (click)="deleteItem(item.id)" class="btn btn-danger">Delete</button>
         </td>
       </tr>

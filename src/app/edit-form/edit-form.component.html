@@ -1,0 +1,37 @@
+<!-- item-form.component.html -->
+<div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <form [formGroup]="addItemForm" (ngSubmit)="onAddItem()">
+          <div class="form-group">
+            <label for="id_voyage">ID Voyage:</label>
+            <input type="text" class="form-control" id="id_voyage" formControlName="id_voyage" />
+          </div>
+  
+          <div class="form-group">
+            <label for="num">Num:</label>
+            <input type="text" class="form-control" id="num" formControlName="num" />
+          </div>
+  
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" formControlName="email" />
+          </div>
+  
+          <div class="form-group">
+            <label for="nom">Nom:</label>
+            <input type="text" class="form-control" id="nom" formControlName="nom" />
+          </div>
+  
+          <div class="form-group">
+            <label for="prenom">Prenom:</label>
+            <input type="text" class="form-control" id="prenom" formControlName="prenom" />
+          </div>
+  
+          <button type="submit" class="btn btn-primary" [disabled]="addItemForm.invalid">Add Item</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+  
