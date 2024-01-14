@@ -19,6 +19,7 @@ export class ClientComponent implements OnInit {
   fetchItems(): void {
     this.dataService.getItems().subscribe((data) => {
       this.items = data;
+      console.log({data});
     });
   }
   
